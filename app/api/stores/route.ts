@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import { auth } from "@clerk/nextjs"
-import prismadb from "@/lib/prismadb"
+import db from "@/lib/prismadb"
 
 export async function POST(
   req: Request,
@@ -19,7 +19,7 @@ export async function POST(
       return new NextResponse("Missing name", {status: 400})
     }
 
-    const store = await prismadb.store.create({
+    const store = await db.store.create({
       data: {
         name,
         userId,
