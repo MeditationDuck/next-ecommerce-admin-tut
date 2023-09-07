@@ -40,7 +40,11 @@ export const StoreModal = () => {
     try{
       setLoading(true)
       const response = await axios.post("/api/stores", values)
-      toast.success("Store created")
+        // this will refresh
+      window.location.assign(`/${response.data.id}`)
+
+      //but router will not refresh then stuck.
+
     } catch(error){
     
       toast.error("Something went wrong")
