@@ -33,14 +33,15 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
 ### Connect to PlanetScale and Push Prisma
+
 ```shell
 npx prisma generate
 npx prisma db push
 ```
 
 ### Setup .env file
+
 ```js
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
@@ -62,3 +63,5 @@ STRIPE_API_KEY=
 FRONTEND_STORE_URL=http://localhost:3001
 STRIPE_WEBHOOK_SECRET=
 ```
+
+Readme end.
